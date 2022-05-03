@@ -296,22 +296,24 @@ export default {
       line-height: 26px;
       padding: 0 10px;
       cursor: pointer;
+      transition: all 0.4s;
     }
   }
 }
 /* 标签激活的样式 */
 .isActive {
-  background-color: #fdf5f5;
-  color: #ec4141;
+  background-color: #ec4141;
+  color: #fff;
   border-radius: 13px;
 }
 /* 打开全部标签的按钮 */
 .tag-btn {
-  color: #343434;
-  border-color: #d8d8d8;
+  color: #fff;
+  background-color: #ec4141;
   padding: 0 30px;
+  transition: all 0.4s;
   &:hover {
-    background-color: #f2f2f2;
+    background-color: #cd3939;
   }
 }
 /* 弹出层 */

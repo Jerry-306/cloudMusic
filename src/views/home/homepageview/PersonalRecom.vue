@@ -81,8 +81,9 @@ export default {
     // 轮播图
     async getImgList() {
       const res = await getBanner()
-      if (res.code !== 200) return
-      this.imgList = Object.freeze(res.banners)
+      if (res.code === 200) {
+        this.imgList = Object.freeze(res.banners);
+      }
     },
     // 获取热门推荐歌单 未登录时
     async getRecSongList(limit) {

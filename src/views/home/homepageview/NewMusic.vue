@@ -68,16 +68,17 @@ export default {
       box-sizing: border-box;
       color: #373737;
       background-color: #fff;
-      transition: all 0.5s;
+      transition: all 0.4s;
       &:hover {
         background-color: #f4f4f4;
+        color: #ec4141;
       }
     }
     .btn-newmusic_active {
-      background-color: #bbbbbb;
+      background-color: #ec4141;
       color: #fff;
       &:hover {
-        background-color: #bbbbbb;
+        background-color: #c43232;
       }
     }
   }
