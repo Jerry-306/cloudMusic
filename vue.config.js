@@ -4,7 +4,7 @@ const resolve = dir => path.join(__dirname, dir);
 
 module.exports = {
     devServer: {
-        proxy: 'http://localhost:3000'
+        proxy: 'https://netease-cloud-music-api-lovat-phi.vercel.app/'
     },
 
     chainWebpack: config => {
