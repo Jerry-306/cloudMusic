@@ -62,13 +62,14 @@
         </div>
       </div>
       <div class="btn-other">
-        <!-- 音量按钮 -->
+        <!-- 下载按钮 -->
         <div class="dowmload">
           <i
             class="el-icon-download volume-icon mright-20 pointer"
             @click="download"
           ></i>
         </div>
+        <!-- 音量按钮 -->
         <div class="volume">
           <div @click="isMute = !isMute">
             <i
@@ -77,9 +78,8 @@
             ></i>
             <i v-else class="iconfont icon-shengyin volume-icon pointer"></i>
           </div>
-
           <div class="volume-slider">
-            <el-slider v-model="volume" vertical height="200px"> </el-slider>
+            <el-slider v-model="volume" vertical height="120px"> </el-slider>
           </div>
         </div>
         <!-- 当前播放列表 -->
@@ -517,10 +517,13 @@ export default {
   width: 300px;
   justify-content: flex-end;
   margin-right: 20px;
+  :hover {
+    color: red;
+  }
 }
 /* 音量图标 */
 .volume-icon {
-  font-size: 30px;
+  font-size: 22px;
 }
 .volume {
   position: relative;
@@ -529,8 +532,8 @@ export default {
   .volume-slider {
     display: none;
     position: absolute;
-    top: -220px;
-    left: -3px;
+    top: -144px;
+    left: -7px;
     background-color: #ffffff;
     padding: 10px 0;
     border-radius: 5px;

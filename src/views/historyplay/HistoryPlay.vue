@@ -21,30 +21,47 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import MusicList from '@/components/list/MusicList.vue'
+import Vue from "vue";
+import { mapState } from "vuex";
+import MusicList from "@/components/list/MusicList.vue";
 export default {
   components: { MusicList },
   computed: {
-    ...mapState(['historyList']),
+    ...mapState(["historyList"]),
     length() {
-      return this.historyList.length
-    }
+      return this.historyList.length;
+    },
   },
- 
+
   methods: {
     playAll() {
       /* 访问音乐列表组件的方法 */
-      this.$refs.listRef.playMusicAll()
+      this.$refs.listRef.playMusicAll();
     },
     clearHistory() {
-      if (!window.localStorage.getItem('historylist')) return
-      this.$store.commit('setHistoryList', {
-        type: 'clear'
-      })
-    }
-  }
-}
+      Vue.prototype
+        .$confirm("将要清除最近播放记录, 是否继续?", "提示", {
+          confirmButtonText: "确定",
+          cancelButtonText: "取消",
+          type: "warning",
+        })
+        .then(() => {
+          if (!window.localStorage.getItem("historylist")) return;
+          this.$store.commit("setHistoryList", {
+            type: "clear",
+          });
+          Vue.prototype.$message.success("清除成功");
+        })
+        .catch((err) => {
+          console.log(err);
+          Vue.prototype.$message({
+            type: "info",
+            message: "已取消",
+          });
+        });
+    },
+  },
+};
 </script>
 
 <style lang="less" scoped>

@@ -457,7 +457,7 @@ input[type='checkbox'] {
 
 .check-in,
 .check-out {
-  color: #34538b;
+  color: #ec4141;
   cursor: pointer;
 }
 

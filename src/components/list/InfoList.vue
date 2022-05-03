@@ -45,6 +45,7 @@ export default {
   display: flex;
   height: 90px;
   align-items: center;
+  transition: all 0.4s;
   &:nth-child(odd) {
     background-color: #f9f9f9;
   }
@@ -53,6 +54,7 @@ export default {
   }
   &:hover {
     background-color: #f0f1f2;
+    color: #cc1b1b;
   }
 }
 .sub-img {

@@ -342,7 +342,7 @@ th {
 
 /* 设置鼠标处于element表格上的状态 */
 .el-table {
-    cursor: default;
+    cursor: pointer;
 }
 
 /* div制作的线条 */
