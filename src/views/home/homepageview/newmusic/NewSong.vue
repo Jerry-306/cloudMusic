@@ -15,11 +15,11 @@
       <div class="btn-wrap">
         <button class="btn btn-red" @click="playMusicAll">
           <i class="iconfont icon-bofang"></i>
-          <span class="btn-text">播放全部</span>
+          <span class="btn-text"> 播放全部</span>
         </button>
         <button class="btn btn-white mleft-12" @click="openAddDialog">
           <i class="el-icon-folder-add"></i>
-          <span class="btn-text">收藏全部</span>
+          <span class="btn-text"> 收藏全部</span>
         </button>
       </div>
     </div>

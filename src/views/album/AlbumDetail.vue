@@ -19,7 +19,7 @@
         <ul class="info-btn">
           <button class="btn btn-red" @click="playAll">
             <i class="iconfont icon-bofang"></i>
-            <span class="btn-text">播放全部</span>
+            <span class="btn-text"> 播放全部</span>
           </button>
           <button
             v-if="!isSub"
@@ -27,15 +27,15 @@
             @click="subAlbum(1)"
           >
             <i class="el-icon-folder-add"></i>
-            <span class="btn-text">收藏({{ subCount | countFormat }})</span>
+            <span class="btn-text"> 收藏({{ subCount | countFormat }})</span>
           </button>
           <button v-else class="btn btn-white mleft-10" @click="subAlbum(0)">
             <i class="el-icon-folder-checked"></i>
-            <span class="btn-text">已收藏({{ subCount | countFormat }})</span>
+            <span class="btn-text"> 已收藏({{ subCount | countFormat }})</span>
           </button>
           <button class="btn btn-white mleft-10">
             <i class="iconfont icon-fenxiang"></i>
-            <span class="btn-text">分享({{ shareCount | countFormat }})</span>
+            <span class="btn-text"> 分享({{ shareCount | countFormat }})</span>
           </button>
         </ul>
         <div class="author font-14">

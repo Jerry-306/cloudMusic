@@ -139,7 +139,7 @@ export default {
         background-color: #f9f9f9;
       }
       &:nth-child(3) {
-        background-color: #efefef;
+        background-color: #f9f9f9;
       }
       &:nth-child(4) {
         color: #666;

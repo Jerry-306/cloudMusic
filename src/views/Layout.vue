@@ -87,11 +87,12 @@
         >
           <el-table-column type="index" width="50">
             <template v-slot="scope">
-              <span style="color: red" v-if="showCurren(scope.row.id)"
-                ><i v-if="isPlay" class="iconfont icon-shengyin_shiti"></i
-                ><i v-else class="iconfont icon-sound"></i
-              ></span>
-
+              <span style="color: red" v-if="showCurren(scope.row.id)">
+                <i v-if="isPlay">
+                  <play-ani />
+                </i>
+                <i v-else class="iconfont icon-sound"></i>
+                </span>
               <span v-else>{{ scope.$index + 1 }}</span>
             </template>
           </el-table-column>
@@ -118,10 +119,12 @@
 import { mapGetters, mapState } from 'vuex'
 import FooterBar from '@/components/footer/FooterBar.vue'
 import HeaderBar from '@/components/header/HeaderBar.vue'
+import PlayAni from '@/components/playAni'
 export default {
   components: {
     FooterBar,
-    HeaderBar
+    HeaderBar,
+    PlayAni
   },
   data() {
     return {

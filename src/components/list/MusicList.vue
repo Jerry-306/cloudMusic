@@ -13,10 +13,12 @@
   >
     <el-table-column type="index" width="50">
       <template v-slot="scope">
-        <span class="active-color" v-if="showCurren(scope.row.id)"
-          ><i v-if="isPlay" class="iconfont icon-shengyin_shiti"></i
-          ><i v-else class="iconfont icon-sound"></i
-        ></span>
+        <span class="active-color" v-if="showCurren(scope.row.id)">
+          <i v-if="isPlay">
+            <play-ani/>
+          </i>
+          <i v-else class="iconfont icon-sound"></i>
+          </span>
         <span v-else style="color: #c3c3db">{{ scope.$index + 1 }}</span>
       </template>
     </el-table-column>
@@ -86,7 +88,9 @@
 <script>
 import { mapState } from 'vuex'
 import { likeMusic } from '@/api/api_music.js'
+import PlayAni from '../playAni'
 export default {
+  components: { PlayAni },
   props: {
     list: {
       type: Array,

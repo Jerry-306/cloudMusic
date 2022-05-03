@@ -62,7 +62,7 @@
               <ul class="info-btn">
                 <button class="btn btn-red" @click="playAll">
                   <i class="iconfont icon-bofang"></i>
-                  <span class="btn-text">播放全部</span>
+                  <span class="btn-text"> 播放全部</span>
                 </button>
                 <button
                   v-if="!subscribed"
@@ -72,7 +72,7 @@
                 >
                   <i class="el-icon-folder-add"></i>
                   <span class="btn-text"
-                    >收藏({{ info.subscribedCount | countFormat }})</span
+                    > 收藏({{ info.subscribedCount | countFormat }})</span
                   >
                 </button>
                 <button
@@ -82,13 +82,13 @@
                 >
                   <i class="el-icon-folder-checked"></i>
                   <span class="btn-text"
-                    >已收藏({{ info.subscribedCount | countFormat }})</span
+                    > 已收藏({{ info.subscribedCount | countFormat }})</span
                   >
                 </button>
                 <button class="btn btn-white mleft-10">
                   <i class="iconfont icon-fenxiang"></i>
                   <span class="btn-text"
-                    >分享({{ info.shareCount | countFormat }})</span
+                    > 分享({{ info.shareCount | countFormat }})</span
                   >
                 </button>
                 <button
@@ -97,7 +97,7 @@
                   @click="loadCompletePlayList"
                 >
                   <i class="el-icon-hot-water"></i>
-                  <span class="btn-text">加载完整歌单</span>
+                  <span class="btn-text"> 加载完整歌单</span>
                 </button>
               </ul>
               <div class="detail-tag font-14" v-if="tags.length !== 0">
