@@ -1,10 +1,11 @@
 
 const path = require("path");
 const resolve = dir => path.join(__dirname, dir);
+const BASE_URL = process.env.VUE_APP_URL;
 
 module.exports = {
     devServer: {
-        proxy: 'https://netease-cloud-music-api-lovat-phi.vercel.app/'
+        proxy: BASE_URL
     },
 
     chainWebpack: config => {
