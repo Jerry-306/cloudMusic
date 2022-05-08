@@ -25,7 +25,7 @@
             <li
               v-for="(music, index) in item.tracks"
               :key="music.id"
-              class="default-cursor"
+              class="default-cursor music-li"
               @dblclick="playMusic(music.id, listIndex, index)"
             >
               <span class="mleft-12 text-hidden">{{ index + 1 }}</span
@@ -150,6 +150,9 @@ export default {
       }
       &:hover {
         background-color: #f4f4f4;
+        .geming {
+          color: #ec4141;
+        }
       }
       span {
         display: inline-block;

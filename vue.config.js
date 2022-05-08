@@ -1,13 +1,13 @@
 
 const path = require("path");
 const resolve = dir => path.join(__dirname, dir);
-const BASE_URL = process.env.VUE_APP_URL;
 
 module.exports = {
     devServer: {
-        proxy: BASE_URL
+        // proxy: 'http://localhost:3000'
+        proxy: 'https://musicapi-jade.vercel.app/'
+        // proxy: 'https://music.163.com/'
     },
-
     chainWebpack: config => {
         config.resolve.alias.set("@", resolve("src"));
         config.when(process.env.NODE_ENV === 'production', config => {
@@ -37,6 +37,7 @@ module.exports = {
             })
         })
     },
-
+    integrity: true,
+    publicPath: '/',
     productionSourceMap: false
 }

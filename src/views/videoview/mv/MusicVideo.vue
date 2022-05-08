@@ -166,8 +166,8 @@ export default {
 
 <style lang="less" scoped>
 .isActive {
-  background-color: #fcebeb;
-  color: #ec4141;
+  background-color: #ec4141;
+  color: #fff;
   border-radius: 15px;
   padding: 0 10px;
 }

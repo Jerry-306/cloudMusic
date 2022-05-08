@@ -254,8 +254,11 @@ export default {
       width: 42px;
       height: 42px;
       border-radius: 50%;
+      transition: all 0.4s;
       &:hover {
-        background-color: #f5f5f5;
+        background-color: #ffffff;
+        color: #ec4141;
+        border: 1px solid #ec4141;
       }
       i {
         font-size: 20px;

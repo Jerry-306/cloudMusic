@@ -297,13 +297,16 @@ export default {
       padding: 0 10px;
       cursor: pointer;
       transition: all 0.4s;
+      &:hover {
+        color: #ec4141;
+      }
     }
   }
 }
 /* 标签激活的样式 */
 .isActive {
   background-color: #ec4141;
-  color: #fff;
+  color: #fff !important;
   border-radius: 13px;
 }
 /* 打开全部标签的按钮 */

@@ -87,12 +87,16 @@ export default {
   border: 0;
   background-color: #fff;
   padding: 0 10px;
-  cursor: pointer;
   color: #676767;
+  transition: all 0.4s;
+  cursor: pointer;
+  &:hover {
+    color: #ec4141;
+  }
 }
 .btn-tag_active {
-  color: #ec4141;
-  background-color: #fdf5f5;
+  color: #fff !important;
+  background-color: #ec4141;
 }
 @media screen and (max-width: 415px) {
   .btn-wrap {
