@@ -78,9 +78,10 @@ export default {
   overflow: hidden;
   .login-container {
     min-height: 100vh;
-    background-image: url('https://cdn.jsdelivr.net/gh/crazybox521/blogImg/login.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    // background-image: url('https://cdn.jsdelivr.net/gh/crazybox521/blogImg/login.jpg');
+    background-image: linear-gradient(to right bottom, #0ad2df, #f606fe);
+    // background-size: 100% 100%;
+    // background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
