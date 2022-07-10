@@ -1,53 +1,56 @@
 <template>
   <div class="layout" :class="{ layout_gray: isGray }">
     <!-- 头部 -->
-    <div class="header"><HeaderBar /></div>
+    <div class="header">
+      <HeaderBar />
+    </div>
     <!-- 内容区域 -->
     <div class="main">
       <!-- 左侧导航栏 -->
       <div class="aside">
-        <el-menu router active-text-color="#ec4141" @select="handleSelect">
-          <el-menu-item
-            :index="item.path"
-            v-for="item in commenList"
-            :key="item.path"
-            :disabled="item.Login && !isLogin"
-          >
-            <span slot="title">{{ item.title }}</span>
-          </el-menu-item>
-          <el-menu-item-group>
-            <template slot="title">我的音乐</template>
-            <el-menu-item
-              :index="item.path"
-              v-for="item in myList"
-              :key="item.path"
-              :disabled="item.Login && !isLogin"
-              ><span slot="title">{{ item.title }}</span>
+        <el-menu router active-text-color="#d10303" @select="handleSelect" unique-opened>
+          <el-submenu index="1">
+            <template slot="title">
+              <i class="el-icon-orange"></i>
+              <span>精彩推荐</span>
+            </template>
+            <el-menu-item :index="item.path" v-for="item in commenList" :key="item.path"
+              :disabled="item.Login && !isLogin">
+              <span slot="title">{{ item.title }}</span>
             </el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group v-if="isLogin">
-            <template slot="title">创建的歌单</template>
-            <el-menu-item
-              :index="subPath(item.id)"
-              v-for="(item, index) in createPlaylist"
-              :key="item.id"
-              ><div slot="title" class="text-hidden">
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title">
+              <i class="el-icon-user"></i>
+              <span>我的音乐</span>
+            </template>
+            <el-menu-item :index="item.path" v-for="item in myList" :key="item.path" :disabled="item.Login && !isLogin">
+              <span slot="title">{{ item.title }}</span>
+            </el-menu-item>
+          </el-submenu>
+          <el-submenu index="3" v-if="isLogin">
+            <template slot="title">
+              <i class="el-icon-cherry"></i>
+              <span>我的创建</span>
+            </template>
+            <el-menu-item :index="subPath(item.id)" v-for="(item, index) in createPlaylist" :key="item.id">
+              <div slot="title" class="text-hidden">
                 <i v-if="index === 0" class="iconfont icon-aixin"></i>
-                <i v-else class="iconfont icon-gedan"></i>{{ item.name }}
+                <i v-else class="iconfont icon-gedan"></i> {{ item.name }}
               </div>
             </el-menu-item>
-          </el-menu-item-group>
-          <el-menu-item-group v-if="isLogin">
-            <template slot="title">收藏的歌单</template>
-            <el-menu-item
-              :index="subPath(item.id)"
-              v-for="item in subscribePlaylist"
-              :key="item.id"
-              ><div slot="title" class="text-hidden">
-                <i class="iconfont icon-gedan"></i>{{ item.name }}
+          </el-submenu>
+          <el-submenu index="4" v-if="isLogin">
+            <template slot="title">
+              <i class="el-icon-star-off"></i>
+              <span>收藏歌单</span>
+            </template>
+            <el-menu-item :index="subPath(item.id)" v-for="item in subscribePlaylist" :key="item.id">
+              <div slot="title" class="text-hidden">
+                <i class="iconfont icon-gedan"></i> {{ item.name }}
               </div>
             </el-menu-item>
-          </el-menu-item-group>
+          </el-submenu>
         </el-menu>
       </div>
       <!-- 右侧内容区域 -->
@@ -60,31 +63,17 @@
         <el-backtop target=".main-right" :bottom="100"></el-backtop>
       </div>
       <!-- 当前播放列表抽屉 -->
-      <el-drawer
-        title="当前播放"
-        :visible.sync="drawerMusicList"
-        :before-close="handMusicListClose"
-      >
+      <el-drawer title="当前播放" :visible.sync="drawerMusicList" :before-close="handMusicListClose">
         <div class="flex-around">
           <div class="font-12 mleft-12">共 <span class="text">{{ length }}</span> 首</div>
           <div class="font-12 mleft-12">
-            <span v-show="length !== 0"
-              >当前播放第 <span class="text">{{ currenIndex + 1 }}</span> 首</span
-            >
+            <span v-show="length !== 0">当前播放第 <span class="text">{{ currenIndex + 1 }}</span> 首</span>
             <span v-show="length === 0">没有在播放哦</span>
           </div>
         </div>
         <el-divider></el-divider>
-        <el-table
-          :show-header="false"
-          :data="musicList"
-          style="width: 100%"
-          size="mini"
-          stripe
-          @row-dblclick="playMusic"
-          empty-text="快去播放音乐吧！"
-          tooltip-effect="light"
-        >
+        <el-table :show-header="false" :data="musicList" style="width: 100%" size="mini" stripe
+          @row-dblclick="playMusic" empty-text="快去播放音乐吧！" tooltip-effect="light">
           <el-table-column type="index" width="50">
             <template v-slot="scope">
               <span style="color: red" v-if="showCurren(scope.row.id)">
@@ -92,7 +81,7 @@
                   <play-ani />
                 </i>
                 <i v-else class="iconfont icon-sound"></i>
-                </span>
+              </span>
               <span v-else>{{ scope.$index + 1 }}</span>
             </template>
           </el-table-column>
@@ -224,10 +213,13 @@ export default {
   width: 100%;
   height: 100%;
 }
+
 .layout_gray {
-  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  -webkit-filter: grayscale(100%);
+  /* Chrome, Safari, Opera */
   filter: grayscale(100%);
 }
+
 .header {
   position: absolute;
   background-color: @headRed;
@@ -266,15 +258,18 @@ export default {
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: thin;
+
   .view-mian {
     width: 90%;
     margin: 0 auto;
     max-width: 1200px;
   }
 }
+
 .text {
   color: #d10303;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -294,6 +289,7 @@ export default {
   .main-right {
     left: 0;
   }
+
   .footer {
     height: 51px;
   }
