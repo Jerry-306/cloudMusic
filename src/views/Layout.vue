@@ -245,6 +245,7 @@ export default {
   width: 200px;
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main-right {
