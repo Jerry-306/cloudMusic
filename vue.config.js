@@ -3,11 +3,11 @@ const path = require("path");
 const resolve = dir => path.join(__dirname, dir);
 
 module.exports = {
-    devServer: {
-        // proxy: 'http://localhost:3000'
-        proxy: 'https://musicapi-jade.vercel.app/'
-        // proxy: 'https://music.163.com/'
-    },
+    // devServer: {
+    //     // proxy: 'http://localhost:3000'
+    //     proxy: 'https://musicapi-jade.vercel.app/'
+    //     // proxy: 'https://music.163.com/'
+    // },
     chainWebpack: config => {
         config.resolve.alias.set("@", resolve("src"));
         config.when(process.env.NODE_ENV === 'production', config => {
