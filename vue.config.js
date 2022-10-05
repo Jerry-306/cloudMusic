@@ -5,7 +5,7 @@ const resolve = dir => path.join(__dirname, dir);
 module.exports = {
     devServer: {
         // proxy: 'http://localhost:3000'
-        // proxy: 'https://musicapi-jade.vercel.app/'
+        proxy: 'https://musicapi-jade.vercel.app/'
         // proxy: 'https://music.163.com/'
     },
     chainWebpack: config => {
