@@ -4,7 +4,7 @@
       <div class="img-wrap">
         <img
           class="img circle pointer"
-          v-lazy="item.user.avatarUrl"
+          :src="item.user.avatarUrl"
           @click="toUserDetail(item.user.userId)"
         />
       </div>

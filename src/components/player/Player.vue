@@ -6,7 +6,7 @@
       <div class="player-left">
         <img
           class="pointer img-border"
-          v-lazy="imgInfo.imgUrl"
+          :src="imgInfo.imgUrl"
           @click="openPlayView"
         />
         <div class="music-info">
