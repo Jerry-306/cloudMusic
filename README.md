@@ -2,7 +2,7 @@
     <h1>网易云音乐</h1>
 </div>
 
-<p>
+<p align="center">
 <a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/npm/v/NeteaseCloudMusicApi.svg" alt="Version"></a>
 <a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/npm/l/NeteaseCloudMusicApi.svg" alt="License"></a>
 <a href="https://www.npmjs.com/package/NeteaseCloudMusicApi"><img src="https://img.shields.io/david/dev/binaryify/NeteaseCloudMusicApi.svg" alt="devDependencies" ></a>
@@ -176,6 +176,6 @@ $ npm run serve
 127. 重复昵称检测
 128. 歌手粉丝数量
 
-## 后端项目贡献者贡献者
+## 后端项目贡献者
 
 ![](https://opencollective.com/NeteaseCloudMusicApi/contributors.svg?width=890)
