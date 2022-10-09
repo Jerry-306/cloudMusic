@@ -4,7 +4,7 @@
     <ul class="follow-list-ul">
       <li v-for="i in list" :key="i.userId">
         <div class="img-wrap pointer" @click="clickImg(i)">
-          <img class="img img-h" :src="i.avatarUrl" alt="" />
+          <img class="img img-h" v-lazy="i.avatarUrl" alt="" />
         </div>
         <div class="content-wrap">
           <div class="content-item pointer text-hidden" @click="clickImg(i)">
