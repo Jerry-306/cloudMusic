@@ -10,19 +10,23 @@ import './utils/filters'
 import './assets/css/global.css'
 import './assets/css/my-element.css'
 import './assets/css/btn.css'
+
+import errorImage from './assets/img/error.jpg'
+import loadingImage from './assets/img/loading.gif'
+
 import VueCropper from 'vue-cropper'
 Vue.use(VueCropper)
-// import VueLazyload from 'vue-lazyload'
+import VueLazyload from 'vue-lazyload'
  
 // Vue.use(VueLazyload)
  
 // with options
-// Vue.use(VueLazyload, {
-//   preLoad: 1.9,
-//   error: require('./assets/img/error.jpg'),
-//   loading:  require('./assets/img/loading.gif'),
-//   attempt: 3
-// })
+Vue.use(VueLazyload, {
+  preLoad: 1.9,
+  error: errorImage,
+  loading: loadingImage,
+  attempt: 3
+})
 
 Vue.config.productionTip = false
 

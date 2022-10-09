@@ -34,7 +34,7 @@
         <template #img="{ item }">
           <img
             class="sub-img mleft-10"
-            :src="item.al.picUrl + '?param=100y100'"
+            v-lazy="item.al.picUrl + '?param=100y100'"
           />
         </template>
         <template #title="{ item }">

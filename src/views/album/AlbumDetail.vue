@@ -6,7 +6,7 @@
       <div class="detail-img-wrapper">
         <img
           class="img img-radius-8 img-border"
-          :src="imgUrl + '?param=300y300'"
+          v-lazy="imgUrl + '?param=300y300'"
         />
       </div>
       <!-- 专辑信息 -->
@@ -117,7 +117,7 @@ export default {
     ...mapState(['isLogin']),
     imgUrl() {
       return this.albumInfo.picUrl
-        ? this.albumInfo.picUrl + '?param=300y300'
+        ? this.albumInfo.picUrl
         : ''
     },
     description() {

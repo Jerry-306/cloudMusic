@@ -14,7 +14,7 @@
           <div class="img-wrap">
             <img
               class="img-h img-radius-4 pointer"
-              :src="item.coverImgUrl"
+              v-lazy="item.coverImgUrl"
               @click="toPlayListDetail(item.id)"
             />
             <div class="play-btn pointer" @click="toPlayListDetail(item.id)">

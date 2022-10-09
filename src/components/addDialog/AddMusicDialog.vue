@@ -9,7 +9,7 @@
         <template #img="{ item }">
           <img
             class="sub-img mleft-10"
-            :src="item.coverImgUrl + '?param=100y100'"
+            v-lazy="item.coverImgUrl + '?param=100y100'"
           />
         </template>
       </InfoList>
