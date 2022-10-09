@@ -1,7 +1,7 @@
-# NetEaseCloudMusic
+# 网易云音乐
 
-#### 介绍
-网易云音乐兼容PC端与移动端
+## 在线演示
+[在线演示](https://cloud-music-ten-black.vercel.app/#/)  推荐扫码登录
 
-#### 软件架构
+## 
 Vue + Node.js
