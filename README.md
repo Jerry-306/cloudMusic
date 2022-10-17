@@ -14,10 +14,66 @@
 本项目采用**Vue**和**Node.js**等技术，构建了一个在线音乐播放平台，兼容PC端与移动端，实现登录、在线点播、MV等一百多个功能，后期会不断加入新功能。具体功能请看在线演示。
 
 ### 在线演示
-功能太多，就不放截图了。感兴趣直接戳链接👇👇👇
 
 [点我试试看](https://cloud-music-ten-black.vercel.app/#/)
 推荐使用PC端打开，效果更佳
+
+### 项目截图
+
++ 登录
+  ![登录](img-folder/login.png)
++ 个性推荐
+  ![个性推荐](img-folder/personal-recommendation.png)
++ 歌单
+  ![歌单](img-folder/song-list.png)
++ 筛选器
+  ![筛选器](img-folder/filter.png)
++ 排行榜
+  ![排行版](img-folder/leaderboard.png)
++ 歌手
+  ![歌手](img-folder/singers.png)
++ 新歌速递
+  ![新歌速递](img-folder/new-songs.png)
++ 新碟上架
+  ![新碟上架](img-folder/new-discs.png)
++ 搜索联想
+  ![搜索联想](img-folder/search-association.png)
++ 搜索结果
+  ![搜搜结果](img-folder/search-details.png)
++ 音乐播放界面
+  ![音乐播放界面](img-folder/music-player-interface.png)
++ 评论区
+  ![评论区](img-folder/comment-area.png)
++ 视频播放界面
+  ![视频播放界面](img-folder/video-player-interface.png)
++ 视频
+  ![视频](img-folder/video-list.png)
++ MV
+  ![MV](img-folder/mv-list.png)
++ 私人FM
+  ![私人FM](img-folder/private-fm.png)
++ 歌单详情
+  ![歌单详情](img-folder/playlist-details.png)
++ 歌单评论
+  ![歌单评论](img-folder/comment.png)
++ 歌单收藏者
+  ![歌单收藏者](img-folder/collector.png)
++ 作者信息
+  ![作者信息](img-folder/author-details-page.png)
++ 每日推荐
+  ![每日推荐](img-folder/daily-recommendation.png)
++ 当前播放
+  ![当前播放](img-folder/currently-playing.png)
++ 我的创建
+  ![我的创建](img-folder/my-creation.png)
++ 我的收藏
+  ![我的收藏](img-folder/my-collection.png)
++ 最近播放
+  ![最近播放](img-folder/currently-playing.png)
++ 收藏歌单
+  ![收藏歌单](img-folder/favorite-playlist.png)
++ 个人中心
+  ![个人中心](img-folder/personal-center.png)
 
 ## 灵感来自
 
