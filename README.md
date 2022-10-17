@@ -69,7 +69,7 @@
 + 我的收藏
   ![我的收藏](img-folder/my-collection.png)
 + 最近播放
-  ![最近播放](img-folder/currently-playing.png)
+  ![最近播放](img-folder/recently-played.png)
 + 收藏歌单
   ![收藏歌单](img-folder/favorite-playlist.png)
 + 个人中心
