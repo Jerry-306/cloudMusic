@@ -16,6 +16,11 @@
 ### 在线演示
 
 [点我试试看](https://cloud-music-ten-black.vercel.app/#/)
+
+或者
+
+[点我](https://jerry-306.github.io/cloud-music/)
+
 推荐使用PC端打开，效果更佳
 
 ### 项目截图
